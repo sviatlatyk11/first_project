@@ -25,10 +25,9 @@ soup = get_page_soup(url)
 lst_currency = get_currency(soup)
 lst_price = get_price(soup)
 
-for currency in lst_currency:
-    for price in lst_price:
-        result[currency] = price
-        lst_price.remove(price)
-        break
+for i in range(len(lst_price)):
+    result[lst_currency[i]] = lst_price[i]
 print(result)
+
+
 
