@@ -29,6 +29,5 @@ for currency in lst_currency:
     for price in lst_price:
         result[currency] = price
         lst_price.remove(price)
-        break
 print(result)
 
